@@ -6,7 +6,7 @@ Public Function GetSparta(WebPath As String, Method As String) As String
     
     Set oXHTTP = CreateObject("MSXML2.XMLHTTP")
     oXHTTP.Open Method, WebPath, False
-    oXHTTP.setRequestHeader "HTTP-X-ACCESS-TOKEN", "8e8cf114-f9e3-492f-be61-519db5978425"
+    oXHTTP.setRequestHeader "HTTP-X-ACCESS-TOKEN", "REPLACE WITH REAL TOKEN HERE "
     
     oXHTTP.Send
 
