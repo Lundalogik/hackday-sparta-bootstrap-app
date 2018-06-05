@@ -1,0 +1,17 @@
+Public Function GetSparta(WebPath As String, Method As String) As String
+    On Error GoTo ErrorHandler
+    Dim oXHTTP As Object
+    Dim s As String
+    Dim sPayload As String
+    
+    Set oXHTTP = CreateObject("MSXML2.XMLHTTP")
+    oXHTTP.Open Method, WebPath, False
+    oXHTTP.setRequestHeader "HTTP-X-ACCESS-TOKEN", "8e8cf114-f9e3-492f-be61-519db5978425"
+    
+    oXHTTP.Send
+
+    GetSparta = oXHTTP.responseText
+Exit Function
+ErrorHandler:
+    GetSparta = ""
+End Function
